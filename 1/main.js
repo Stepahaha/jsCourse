@@ -1,46 +1,43 @@
-// let budget = +prompt("Ваш бюджет", "0"),
-//     name = prompt("Имя вашего магазина", "Имя");
+let money = +prompt("Ваш бюджет", "0"),
+    name = prompt("Имя вашего магазина", "Имя"),
+    time = 21;
 
-// let mainList = {
-//  budget: budget,
-//  name: name ,
-//  shopGoods: [],
-//  employers: {
-//  },
-//  open: false
-// };
+let mainList = {
+ budget: money,
+ ShopName: name ,
+ shopGoods: [],
+ employers: {},
+ open: false
+};
 
-// for (let i = 0; i < 3; i++) {
-//  mainList.shopGoods[i] = prompt("Что будем продавать?", "Тебя!");
-// }
+for (let i = 0; i < 5; i++) {
+ a = prompt("Что будем продавать?");
+ if ((typeof(a)) === 'string' && (typeof(a)) != null && a != '' && a.lenght < 50){
+  console.log('Верно!');
+  mainList.shopGoods[i] = a;
+ };
+};
 
-// let amount = +prompt("Сколько будет у вас работников", "0");
+alert('Ваш бюджет на один день: ' + String(mainList.budget / 30));
+console.log(mainList)
 
-// for (let i = 1; i <= amount; i++) {
-//  mainList.employers["employNumber" + String(i)] = prompt('Имя вашего работника номер ' + String(i), 'Васька'); 
-// }
+if (time < 0){
+ console.log('Такого не может быть');
+}else if (time > 8 && time < 20){
+ console.log('Время работать!');
+ }else if (time < 24){
+  console.log('Время уже позднее - магазин закрыт');
+  }else{
+   console.log('В сутках только 24 часа');
+  }
 
-// answer = prompt("Открываем магазин?", 'нет');
-// if (answer != 'нет'){
-//  mainList.open = true;
-// };
+// let num = 33721,
+//     num3 = 1,
+//     num2 = String(num).split('');
 
-// if (mainList.open == true){
-//  alert('Ваш магазин открыыыыт!');
-// }else{
-//  alert("Всё готово, но магаз закрыт");
-// };
+// num2.forEach(element => {
+//  num3 *= Number(element);
+// });
 
-// alert('Имя вашего магазина: ' + mainList.name);
-// alert('Ваш бюджет на один день: ' + String(mainList.budget / 30));
-
-let num = 33721,
-    num3 = 1,
-    num2 = String(num).split('');
-
-num2.forEach(element => {
- num3 *= Number(element);
-});
-
-alert(num3);
-alert(Math.pow(num3, 3));
+// alert(num3);
+// alert(Math.pow(num3, 3));
