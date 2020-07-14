@@ -5,14 +5,14 @@ let menuItem = document.querySelectorAll('li.menu-item'),
     comment = document.getElementById('prompt');
 
 let newElem = document.createElement('li'),
-    third = menuItem[1];
-newElem.classList.add('menu-item');
+    classOfLi = menuItem[0].className;
+newElem.classList.add(classOfLi);
 newElem.textContent = 'Пятый пункт';
 
 
 menu.appendChild(newElem);
 menu.replaceChild(menuItem[2], menuItem[1]);
-menu.insertBefore(third, menuItem[3]);
+menu.insertBefore(menuItem[1], menuItem[3]);
 
 title.textContent = 'Мы продаем только подлинную технику Apple';
 
