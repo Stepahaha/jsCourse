@@ -27,7 +27,7 @@ if (quest) {
  comment.innerText = answer;
 } else {
  alert('Ну и пошёл ты!');
- comment.innerText = 'Никак не относится, уродец'
+ comment.innerText = 'Никак не относится, уродец!'
 };
 }
 
