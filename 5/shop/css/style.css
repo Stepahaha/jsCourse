@@ -7,6 +7,26 @@ body {
   background-size: cover;
   word-break: break-all;
 }
+
+.discount-btn{
+  margin: auto;
+  margin-top: 40px;
+  padding: 15px;
+  display: block;
+  border-radius: 50px;
+  background-color: green;
+  color: #fff;
+  z-index: 10;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(72, 248, 90, 1);
+}
+.discount-btn:active, .discount-btn:checked, .discount-btn:focus{
+  outline: none;
+  border: none;
+}
+
 .open {
   display: -webkit-box;
   display: -webkit-flex;
@@ -103,7 +123,9 @@ body {
 .main-info .discount,
 .main-info .discount-value,
 .main-info .isopen,
-.main-info .isopen-value {
+.main-info .isopen-value,
+.main-info .price,
+.main-info .price-value {
   width: 48%;
   margin-top: 10px;
   min-height: 40px;
@@ -124,6 +146,7 @@ body {
 .main-functions .choose-goods,
 .main-functions .choose-items,
 .main-functions .time,
+.main-functions .price-ask,
 .main-functions .count-budget,
 .main-functions .hire-employers {
   margin-top: 5px;
@@ -145,6 +168,7 @@ body {
 }
 .main-functions .choose-item,
 .main-functions .time-value,
+.main-functions .get-price-value,
 .main-functions .count-budget-value {
   display: block;
   margin: 0 auto;
@@ -153,7 +177,7 @@ body {
   width: 70%;
   height: 25px;
 }
-.main-functions .time-value {
+.main-functions .time-value, .main-functions .get-price-value {
   width: 30%;
 }
 .main-functions .count-budget-value {
@@ -173,4 +197,31 @@ body {
   display: block;
   margin: 0 auto;
   margin-top: 10px;
+}
+
+
+.discount-percent-block{
+  margin-top: 30px;
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+.discount-percent{
+  border: 0;
+  width: 50px;
+  opacity: 0;
+  transform: translateY(-80px);
+  height: 50px;
+  transition: all 1s;
+  font-family: sans-serif, 'Circle';
+  text-align: center;
+  font-weight: 700;
+  border-radius: 25px;
+  font-size: 20px;
+  box-shadow: 0 0 20px rgba(240, 62, 243, 0.8);
+}
+
+.discount-percent:focus {
+  border: none;
+  outline: none;
 }
