@@ -25,13 +25,17 @@ let money,
     discount;
 
 open_btn.addEventListener('click', () => {
+  setTimeout(start, 2000); // Старт запустится через 2 секунды
+});
+
+function start(){
   money = prompt("Ваш бюджет");
   checkNum(money, "Ваш бюджет");
 
   budget_value.textContent = money;
 
   name_value.textContent = prompt("Имя вашего магазина", "Имя").toUpperCase();
-})
+};
 
 goods_button.addEventListener('click', () => {
   for (let i = 0; i < goods_item.length; i++) {
