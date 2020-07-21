@@ -1,0 +1,30 @@
+* {
+ box-sizing: border-box;
+}
+.block {
+ padding: 20px;
+ font-family: sans-serif;
+ border: 3px solid black;
+ margin: 30px;
+}
+span {
+ color: red;
+ font-family: sans-serif;
+}
+.menu {
+ display: flex;
+ position: fixed;
+ justify-content: space-around;
+ width: 100vw;
+}
+.link {
+ font-family: sans-serif;
+ color: #fff;
+ outline: none;
+ text-decoration: none;
+ border: none;
+ background-color: red;
+ border-radius: 15px;
+ padding: 16px;
+ cursor: pointer;
+}
